@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
-use App\category;
+use App\Category;
 
 class CategoriesTableSeeder extends Seeder
 {
@@ -16,7 +16,7 @@ class CategoriesTableSeeder extends Seeder
         $categories = ['Html', 'CSS', 'Php', 'Javascript', 'Vue Cli'];
 
         foreach($categories as $category) {
-            $newCategory = new CAtegory();
+            $newCategory = new Category();
             $newCategory->name = $category;
             $newCategory->slug = Str::slug($category,'-');
 
